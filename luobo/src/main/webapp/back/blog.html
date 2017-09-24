@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>青菜萝卜博客管理系统</title>
+		<link rel="shortcut icon" type="image/png" href="static/i/favicon.png">
+		<link rel="stylesheet" href="static/css/admin.css">
+		<link rel="stylesheet" href="static/layui/css/layui.css">
+		<script src="static/layui/layui.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<h2 class="z cl"><a href="index.html"><img src="static/img/logo2.png"></a></h2>
+			<div class="y cl">
+				<a target="_blank" href="http://www.huding.name">网站首页</a>
+				<a id="top-logout" href="javascript:">退出</a>
+			</div>
+		</div>
+		<div class="admin">
+			<div class="aleft" id="left-container"></div>
+			<div class="aright">
+				<div class="arz cl">
+					<a href="blog-add.html"><i class="layui-icon">&#xe608;</i>添加文章</a>
+					<a href="javascript:;" id="blog-restatic-all"><i class="layui-icon">&#xe608;</i>重新静态</a>
+				</div>
+				<form id="blog-container" method="post" class="aform cl">
+				</form>
+				<div id="blog-pager" class="qing-text-center"></div>
+			</div>
+		</div>
+		<script>
+			layui.config({base:'static/js/'}).use('blog');
+		</script>
+		<script id="template" type="text/template">
+			<table width="100%">
+				<tr>
+					<th width="5%" align="center"><input type="checkbox" name="checkbox" id="selall" /></th>
+					<th width="25%" align="center">文章标题</th>
+					<th width="7%" align="center">作者</th>
+					<th width="5%" align="center">所属分类</th>
+					<th width="5%" align="center">评论数</th>
+					<th width="5%" align="center">阅读数</th>
+					<th width="5%" align="center">喜欢数</th>
+					<th width="5%" align="center">状态</th>
+					<th width="9%" align="center">添加时间</th>
+					<th width="10%" align="center">基本操作</th>
+				</tr>
+				{{#  layui.each(d.list, function(index, item){ }}
+					<tr>
+						<td align="center"><input type="checkbox" class="selall" name="deletes[]" value="4" /></td>
+						<td align="center">{{item.title}}</td>
+						<td align="center">{{item.author}}</td>
+						<td align="center">{{item.categoryName}}</td>
+						<td align="center">{{item.commentNum}}</td>
+						<td align="center">{{item.readNum}}</td>
+						<td align="center">{{item.heartNum}}</td>
+						<td align="center"><span style="color:#FF5722;">{{item.statusName}}</span></td>
+						<td align="center">{{item.publishTime}}</td>
+						<td align="center">
+							<a href="blog-edit.html?id={{item.id}}">修改</a> | <a href="javascript:;" class="row-del" data="{{item.id}}">删除</a>
+						</td>
+					</tr>
+				{{# }); }}
+			</table>
+		</script>
+	</body>
+
+</html>
