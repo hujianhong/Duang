@@ -158,7 +158,12 @@ public class StaticsUtils {
 	private static void doRender(String path,Map<String, Object> t) throws IOException {
 		OutputStream stream = null;
 		try {
-			stream = new FileOutputStream(new File(path));
+			File file = new File(path);
+			if(!file.getParentFile().mkdirs()){
+				// recreate correct dir path 
+				file = new File(genHtmlFilePath(file.getName()));
+			}
+			stream = new FileOutputStream(file);
 			Engine engine = Engine.use();
 			String result = engine.getTemplate(TEMPLATE).renderToString(t);
 			stream.write(result.getBytes(UTF8));

@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Java的BufferedReader类学习笔记">
+  <meta name="keywords" content="青菜萝卜 ,个人博客,Java,IO,Socket">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Java的BufferedReader类学习笔记 | 青菜萝卜胡丁程序员技术分享博客</title>
+  <meta name="renderer" content="webkit">
+  <link rel="shortcut icon" type="image/png" href="static/i/favicon.png">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Java的BufferedReader类学习笔记 | 青菜萝卜胡丁程序员技术分享博客"/>
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="static/editor.md/css/editormd.min.css" />
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/layui/css/layui.css"/>
+  <link rel="stylesheet" href="static/css/qingcai.css"/>
+</head>
+
+<body>
+	<header class="am-topbar am-topbar-fixed-top qing-header">
+		<div class="am-g am-g-fixed">
+		  <h1 class="am-topbar-brand">
+	      <a class="qing-logo" href="index.html"></a>
+	    </h1>
+			<!-- nav start -->
+			<nav class="am-g am-g-fixed qing-fixed qing-nav">
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-show-sm-only qing-btn-mobile" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+			  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+			    <ul class="am-nav am-nav-pills am-topbar-nav">
+			      <li><a href="index.html"><i class="am-icon-home"></i> 首页</a></li>
+			      <li><a href="about.html"><i class="am-icon-info"></i> 关于本站</a></li>
+			      <li><a href="works.html"><i class="am-icon-code"></i> 我的作品</a></li>
+			      <li><a href="message.html"><i class="am-icon-paper-plane"></i> 留言墙</a></li>
+			      <li><a href="donate.html"><i class="am-icon-share-alt"></i> 赞助作者</a></li>
+			    </ul>
+			    <form class="am-topbar-form am-topbar-right am-form-inline layui-form am-hide-sm-only" role="search">
+			      <div class="am-form-group am-form-icon">
+			        <input id="search" name="search" type="text" required lay-verify="required" class="am-form-field am-input-sm am-radius" placeholder="请输入要搜索的关键词">
+			        <i class="am-icon-search"></i>
+			        <button id="btn-search"  type="button" lay-submit lay-filter="search" class="layui-btn layui-btn-small am-hide-sm-only qing-btn-search">搜索</button>
+			      </div>
+			    </form>
+			  </div>
+			</nav>
+		</div>
+	<!-- nav end -->
+	</header>
+	<!--mobile search input start -->
+	<div class="am-show-sm-only am-u-sm-12 qing-sm-search">
+		<form class="m-topbar-form am-topbar-right am-form-inline layui-form" lay-submit lay-filter="searchSM" role="search">
+	      <div class="am-form-group am-form-icon">
+	      	<i class="am-icon-search"></i>
+	        <input id="search-sm" name="search" type="text" class="am-form-field am-form-field am-radius" placeholder="请输入要搜索的关键词" required lay-verify="required">
+	      </div>
+			</form>
+	</div>
+	<!--mobile search input end -->
+	<!-- content srart -->
+	<div class="am-g am-g-fixed qing-fixed qing-container">
+		  <!-- 正文内容开始-->
+	    <div class="am-u-md-8 am-u-sm-12">
+	    		<!-- 通知公告开始 -->
+	    		<div id="qing-notice-cnt"></div>
+	    		<!-- 通知公告结束 -->
+	    	<!--nav start-->
+	    	<div class="qing-blog-nav">
+	    		<a href="index.html"><i class="am-icon-home"></i>首页</a> <i class="am-icon-angle-double-right"></i> <a href="http://localhost:8080/luobo/front/B20170924195941.html">Java的BufferedReader类学习笔记</a>
+	    	</div>
+	    	<!--nav end-->
+	    	<!-- ad start-->
+    		<div id="blog-content-top-ad" class="qing-blog-ad qing-margin-top qing-margin-bottom">
+    			广告占位
+    		</div>
+    		<!-- ad start-->
+	    	<!--blog start -->
+	    	<div class="qing-content">
+	    		<!-- blog header start -->
+	    		<div class="qing-blog-header qing-text-center">
+	    				<input type="hidden" id="qing-blog-id" value="e2de2c2fb832430687bffc4217dec1d7" />
+	    				<h1 class="am-article-title">Java的BufferedReader类学习笔记</h1>
+		          <div class="qing-blog-tips">
+					       	<span class="qing-blog-tip-c"><i class="am-icon-user qing-color-author" title="作者"></i> 胡建洪 &nbsp;</span>
+						      <span class="qing-blog-tip-c"><i class="am-icon-clock-o qing-color-clock" title="时间"></i> 2017-03-07</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-eye-slash qing-color-eye" title="阅读"></i> 阅读(<span id="blog-readNum">103</span>)</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-comments-o qing-color-comment" title="评论"></i> 评论(<span id="blog-commentNum">0</span>)</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-heart-o qing-color-heart" title="点赞"></i> 点赞(<span id="blog-heartNum">41</span>)</span>
+				      </div>
+	    		</div>
+	    		<!-- blog header end -->
+	    		<!-- blog summary start -->
+	    		<div class="qing-margin-top"> 
+        		 <p><div class="qing-blog-summary"><strong>摘要：BufferedReader由Reader类扩展而来，提供通用的缓冲方式文本读取，而且提供了很实用的readLine，读取一个文本行，从字符输入流中读取文本，缓冲各个字符，从而提供字符、数组和行的高效读取。</strong></div></p> 
+	    		</div>
+	    		<!-- blog summary end -->
+	    		<!-- blog content start -->
+	    		<div class="qing-margin-top qing-blog-content" id="article-editormd-view">
+	    				 <p>BufferedReader由Reader类扩展而来，提供通用的缓冲方式文本读取，而且提供了很实用的readLine，读取一个文本行，从字符输入流中读取文本，缓冲各个字符，从而提供字符、数组和行的高效读取。</p>
+<p>BufferedReader的主要方法</p>
+<p>构造方法：</p>
+<pre><code>BufferedReader br = new BufferReader(Reader in);
+</code></pre><p>主要方法：</p>
+<pre><code>int read();//读取单个字符。
+//将字符读入到数组的某一部分。返回读取的字符数。达到尾部 ，返回-1。
+int read(char[] cbuf,int off,int len);
+String readLine();//读取一个文本行。
+void close(); //关闭该流。并释放与该流相关的所有资源。
+</code></pre><p>今天在学习Java的BIO（blocking IO）的时候，在读取socket的输入流数据时，采用了BufferdReader的readLine方法，发现一直阻塞。后来才发现使用readLine方法读取一行必须要有“\r\n“，否则会一直阻塞到Socket超时或者IO异常。下面是我测试时的代码：</p>
+<h2 id="h2-u672Au6B63u5E38u5904u7406u7684u4EE3u7801"><a name="未正常处理的代码" class="reference-link"></a><span class="header-link octicon octicon-link"></span>未正常处理的代码</h2><p>BIOClient：</p>
+<pre><code>package me.huding.study.distributed;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class BIOClient {
+    public static void main(String[] args) throws UnknownHostException, IOException {
+        Socket socket = new Socket("localhost", 7878);
+        socket.setSoTimeout(30000);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter writer = new PrintWriter(socket.getOutputStream(),true);
+        writer.write("hello server");
+        writer.flush();
+        String string = reader.readLine();
+        System.out.println(string);
+        socket.close();
+
+    }
+}
+</code></pre><p>BIOServer:</p>
+<pre><code>package me.huding.study.distributed;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class BIOServer {
+
+    public static void main(String[] args) throws UnknownHostException, IOException {
+        ServerSocket serverSocket = new ServerSocket(7878);
+        Socket socket = serverSocket.accept();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        String string = reader.readLine();
+        System.out.println(string);
+        PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+        writer.write("hello client");
+        writer.flush();
+        socket.close();
+    }
+}
+</code></pre><p>先运行BIOServer，在运行BIOClient，会发现控制台没有输出预期的结果，即BIOServer输出“hello Server”,BIOClient输出“hello client”，而是输出这样的结果：</p>
+<p>BIOServer的结果：</p>
+<pre><code>hello server
+</code></pre><p>BIOClient的结果：</p>
+<pre><code>Exception in thread "main" java.net.SocketTimeoutException: Read timed out
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+    at java.net.SocketInputStream.read(SocketInputStream.java:170)
+    at java.net.SocketInputStream.read(SocketInputStream.java:141)
+    at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+    at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+    at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+    at java.io.InputStreamReader.read(InputStreamReader.java:184)
+    at java.io.BufferedReader.fill(BufferedReader.java:161)
+    at java.io.BufferedReader.readLine(BufferedReader.java:324)
+    at java.io.BufferedReader.readLine(BufferedReader.java:389)
+    at me.huding.study.distributed.BIOClient.main(BIOClient.java:18)
+</code></pre><p>其中BIOClient的结果是因为Socket读取超时出现的。经过简单思考，只要分别将BIOClient的第16行的代码换成：writer.write(“hello server\r\n”);或者writer.println(“hello server”);,将BIOServer的第20行代码替换成：writer.write(“hello client\r\n”);或者writer.println(“hello client”);然后分别运行BIOServer和BIOClient的代码，就可以出线理想的结果：</p>
+<p>BIOClient的结果：</p>
+<pre><code>hello client
+</code></pre><p>BIOServer的结果：</p>
+<pre><code>hello server
+</code></pre><h2 id="h2-u603Bu7ED3"><a name="总结" class="reference-link"></a><span class="header-link octicon octicon-link"></span>总结</h2><p>虽然我在学习Java的IO方面的小小的插曲，但是如果我没有注意到这点，可能以后在写一些生产环境用的的系统时，会出现致命的问题。生活如此艰辛，学习过程还需时刻谨慎小心啊！</p>
+
+	    		</div>
+	    		<!-- blog content end -->
+	    		
+	    		<div class="qing-blog-zhuanzai">
+	    			转载请注明：<a href="http://www.huding.name">青菜萝卜胡丁博客</a> » <a href="http://www.huding.name/http://localhost:8080/luobo/front/B20170924195941.html">Java的BufferedReader类学习笔记</a>
+	    		</div>
+	    		
+	    		<div class="qing-blog-social">
+	    				<span class="qing-blog-action qing-blog-like"> 
+	    					<i class="am-icon-heart"></i> 喜欢 (<span id="blog-content-like" class="count">41</span>)
+	    				</span>
+							<span class="or">or</span>
+							<span class="qing-blog-action qing-blog-share">
+								<i class="am-icon-share-alt"></i> 分享 (<span id="blog-content-share" class="bds_count" data-cmd="count" title="累计分享0次">0</span>)
+								<!-- <div class="action-popover">
+									<div class="popover top in">
+										<div class="arrow"></div>
+										<div class="popover-content">
+											<a href="#" class="sinaweibo fa fa-weibo" data-cmd="tsina" title="" data-original-title="分享到新浪微博"></a>
+											<a href="#" class="bds_qzone fa fa-star" data-cmd="qzone" title="" data-original-title="分享到QQ空间"></a>
+											<a href="#" class="tencentweibo fa fa-tencent-weibo" data-cmd="tqq" title="" data-original-title="分享到腾讯微博"></a>
+											<a href="#" class="qq fa fa-qq" data-cmd="sqq" title="" data-original-title="分享到QQ好友"></a>
+											<a href="#" class="bds_renren fa fa-renren" data-cmd="renren" title="" data-original-title="分享到人人网"></a>
+											<a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="" data-original-title="分享到微信"></a>
+											<a href="#" class="bds_more fa fa-ellipsis-h" data-cmd="more" data-original-title="" title=""></a>
+										</div>
+									</div>
+								</div> -->
+							</span>	
+					</div>
+	    		
+	    		<div class="qing-blog-donate qing-text-center">
+	    				<p>您的支持是博主写作最大的动力，如果您喜欢我的文章，感觉我的文章对您有帮助，请狠狠点击下面的</p>
+	    				<input type="button" id="btn-donate" value="我要小额赞助" class="qing-btn-donate"/>
+	    		</div>
+	    		
+	    		<!-- blog tag  start -->
+    			<div class="qing-margin-top qing-blog-tag">
+	            <i class="am-icon-tags"> &nbsp;</i>
+				   <span class="am-radius">Java</span>
+				   <span class="am-radius">IO</span>
+				   <span class="am-radius">Socket</span>
+	        </div>
+	    		<!-- blog tag  end -->
+	    	</div>
+	    	<!--blog end -->
+	    	
+	    	<!-- blog footer start-->
+    		<div class="qing-blog-foot am-hide-sm-only">
+    				<span class="left"><i class="am-icon-angle-double-left"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">关于青菜萝卜博客在本地运行的方法</a></span>
+    				<span class="right"><a href="http://localhost:8080/luobo/front/B20170924195941.html">第三届阿里中间件性能挑战赛 初赛总结</a>&nbsp;<i class="am-icon-angle-double-right"></i></span>
+    		</div>
+    		<div class="qing-blog-foot am-show-sm-only">
+    				<span><i class="am-icon-angle-double-left"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">关于青菜萝卜博客在本地运行的方法</a></span><br>
+    				<span><i class="am-icon-angle-double-right"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">第三届阿里中间件性能挑战赛 初赛总结</a></span>
+    		</div>
+	    	<!-- blog footer end-->
+	    	
+	    	<!-- dynamic more blog start-->
+				<div class="qing-margin-top" id="hot-rank-blogs"></div>
+	    	<!-- dynamic more blog end-->
+    		<!-- ad start-->
+    		<div id="blog-content-bottom-ad" class="qing-blog-ad qing-margin-top">
+    			广告占位
+    		</div>
+    		<!-- ad start-->
+    		<!-- comment start-->
+    		<div class="qing-content qing-margin-top" id="commentContainer"></div>
+	    	<!-- comment end-->
+	    </div>
+	    <!--正文内容结束-->
+			<!-- 侧边栏 开始-->
+	    <div class="am-u-md-4 am-u-sm-12" id="qing-left"></div>
+	    <!-- 侧边栏结束-->
+	</div>
+	<!-- content end -->
+
+  <footer class="qing-footer">
+    <div class="qing-text-center">
+       <h3><strong>青菜萝卜胡丁程序员技术分享博客简介</strong></h3>
+       <p class="am-text-sm">青菜萝卜胡丁程序员技术分享博客定位为IT技术博客站，博客内容主要涉及编程语言、推荐算法、数据挖掘等方面，分享实用的学习和开发资料。 </p>
+    </div>
+    <div class="qing-text-center">Copyright © 2016-2017 青菜萝卜 胡丁  |  联系我 : 1043244432@qq.com  |  All Rights Reserved.  |  蜀ICP备16028381</div>    
+  </footer>
+	
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/amazeui.min.js"></script>
+	<script src="static/layui/layui.js"></script>
+	<script>
+		layui.config({base:'static/js/'}).use('qingblog');
+	</script>
+	<!-- editor.md parser  -->
+	<script src="static/editor.md/lib/marked.min.js"></script>
+	<script src="static/editor.md/lib/prettify.min.js"></script>
+	<!-- <script src="static/editor.md/lib/raphael.min.js"></script>
+	<script src="static/editor.md/lib/underscore.min.js"></script> -->
+<!-- 	<script src="static/editor.md/lib/sequence-diagram.min.js"></script>
+	<script src="static/editor.md/lib/flowchart.min.js"></script>
+	<script src="static/editor.md/lib/jquery.flowchart.min.js"></script> -->
+	<script src="static/editor.md/editormd.min.js"></script>
+	<script type="text/javascript">
+	   $(function() {
+	      var articleEditormdView;
+	      articleEditormdView = editormd.markdownToHTML("article-editormd-view", {
+	      	htmlDecode      : "style,script,iframe",  // you can filter tags decode
+	      	/* emoji           : true, */
+	      	taskList        : true,
+	      	/* tex             : true,  // 默认不解析
+	      	flowChart       : true,  // 默认不解析
+	      	sequenceDiagram : true,  // 默认不解析 */
+	      });
+	   });
+	</script>
+	<script src="static/js/badutongji.js" ></script>
+	<script src="static/js/alibaba.js"></script>
+</body>
+</html>

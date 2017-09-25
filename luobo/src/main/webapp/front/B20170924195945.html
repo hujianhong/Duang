@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="从零开始搭建个人博客站概述">
+  <meta name="keywords" content="青菜萝卜 ,个人博客,域名,GitHub,layui,博客">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>从零开始搭建个人博客站概述 | 青菜萝卜胡丁程序员技术分享博客</title>
+  <meta name="renderer" content="webkit">
+  <link rel="shortcut icon" type="image/png" href="static/i/favicon.png">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="从零开始搭建个人博客站概述 | 青菜萝卜胡丁程序员技术分享博客"/>
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="static/editor.md/css/editormd.min.css" />
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/layui/css/layui.css"/>
+  <link rel="stylesheet" href="static/css/qingcai.css"/>
+</head>
+
+<body>
+	<header class="am-topbar am-topbar-fixed-top qing-header">
+		<div class="am-g am-g-fixed">
+		  <h1 class="am-topbar-brand">
+	      <a class="qing-logo" href="index.html"></a>
+	    </h1>
+			<!-- nav start -->
+			<nav class="am-g am-g-fixed qing-fixed qing-nav">
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-show-sm-only qing-btn-mobile" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+			  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+			    <ul class="am-nav am-nav-pills am-topbar-nav">
+			      <li><a href="index.html"><i class="am-icon-home"></i> 首页</a></li>
+			      <li><a href="about.html"><i class="am-icon-info"></i> 关于本站</a></li>
+			      <li><a href="works.html"><i class="am-icon-code"></i> 我的作品</a></li>
+			      <li><a href="message.html"><i class="am-icon-paper-plane"></i> 留言墙</a></li>
+			      <li><a href="donate.html"><i class="am-icon-share-alt"></i> 赞助作者</a></li>
+			    </ul>
+			    <form class="am-topbar-form am-topbar-right am-form-inline layui-form am-hide-sm-only" role="search">
+			      <div class="am-form-group am-form-icon">
+			        <input id="search" name="search" type="text" required lay-verify="required" class="am-form-field am-input-sm am-radius" placeholder="请输入要搜索的关键词">
+			        <i class="am-icon-search"></i>
+			        <button id="btn-search"  type="button" lay-submit lay-filter="search" class="layui-btn layui-btn-small am-hide-sm-only qing-btn-search">搜索</button>
+			      </div>
+			    </form>
+			  </div>
+			</nav>
+		</div>
+	<!-- nav end -->
+	</header>
+	<!--mobile search input start -->
+	<div class="am-show-sm-only am-u-sm-12 qing-sm-search">
+		<form class="m-topbar-form am-topbar-right am-form-inline layui-form" lay-submit lay-filter="searchSM" role="search">
+	      <div class="am-form-group am-form-icon">
+	      	<i class="am-icon-search"></i>
+	        <input id="search-sm" name="search" type="text" class="am-form-field am-form-field am-radius" placeholder="请输入要搜索的关键词" required lay-verify="required">
+	      </div>
+			</form>
+	</div>
+	<!--mobile search input end -->
+	<!-- content srart -->
+	<div class="am-g am-g-fixed qing-fixed qing-container">
+		  <!-- 正文内容开始-->
+	    <div class="am-u-md-8 am-u-sm-12">
+	    		<!-- 通知公告开始 -->
+	    		<div id="qing-notice-cnt"></div>
+	    		<!-- 通知公告结束 -->
+	    	<!--nav start-->
+	    	<div class="qing-blog-nav">
+	    		<a href="index.html"><i class="am-icon-home"></i>首页</a> <i class="am-icon-angle-double-right"></i> <a href="http://localhost:8080/luobo/front/B20170924195941.html">从零开始搭建个人博客站概述</a>
+	    	</div>
+	    	<!--nav end-->
+	    	<!-- ad start-->
+    		<div id="blog-content-top-ad" class="qing-blog-ad qing-margin-top qing-margin-bottom">
+    			广告占位
+    		</div>
+    		<!-- ad start-->
+	    	<!--blog start -->
+	    	<div class="qing-content">
+	    		<!-- blog header start -->
+	    		<div class="qing-blog-header qing-text-center">
+	    				<input type="hidden" id="qing-blog-id" value="5a823d3753b945e98696a83fe779bf3b" />
+	    				<h1 class="am-article-title">从零开始搭建个人博客站概述</h1>
+		          <div class="qing-blog-tips">
+					       	<span class="qing-blog-tip-c"><i class="am-icon-user qing-color-author" title="作者"></i> 胡建洪 &nbsp;</span>
+						      <span class="qing-blog-tip-c"><i class="am-icon-clock-o qing-color-clock" title="时间"></i> 2017-02-15</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-eye-slash qing-color-eye" title="阅读"></i> 阅读(<span id="blog-readNum">869</span>)</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-comments-o qing-color-comment" title="评论"></i> 评论(<span id="blog-commentNum">12</span>)</span>
+					        <span class="qing-blog-tip-c"><i class="am-icon-heart-o qing-color-heart" title="点赞"></i> 点赞(<span id="blog-heartNum">365</span>)</span>
+				      </div>
+	    		</div>
+	    		<!-- blog header end -->
+	    		<!-- blog summary start -->
+	    		<div class="qing-margin-top"> 
+        		 <p><div class="qing-blog-summary"><strong>摘要：大概在2016年7月份，在看别人的个人博客系统时，脑子里产生了一个想法，作为程序员出身，为什么不自己开发一个博客系统，检验并锻炼下自己的编程水平，就这样一言不合就开始了开发个人博客系统不归之路，好在最后小有成果，没有留下遗憾。</strong></div></p> 
+	    		</div>
+	    		<!-- blog summary end -->
+	    		<!-- blog content start -->
+	    		<div class="qing-margin-top qing-blog-content" id="article-editormd-view">
+	    				 <p>大概在2016年7月份，在看别人的个人博客系统时，脑子里产生了一个想法，作为程序员出身，为什么不自己开发一个博客系统，检验并锻炼下自己的编程水平，就这样一言不合就开始了开发个人博客系统不归之路，好在最后小有成果，没有留下遗憾。闲话少说，下面开始谈谈我是如何从零开始搭建个人博客系统的。主要准备工作主要有：</p>
+<ol>
+<li>注册域名</li><li>购买主机</li><li>域名解析</li><li>域名备案</li><li>系统开发</li><li>系统部署</li></ol>
+<h2 id="h2-u6CE8u518Cu57DFu540D"><a name="注册域名" class="reference-link"></a><span class="header-link octicon octicon-link"></span>注册域名</h2><p>国内的域名服务提供商比较靠谱的阿里云的万网（<a href="https://wanwang.aliyun.com" title="域名注册_虚拟主机_云服务器_企业邮箱-万网-阿里云旗下品牌">域名注册<em>虚拟主机</em>云服务器_企业邮箱-万网-阿里云旗下品牌</a>），腾讯云的新网（<a href="https://dnspod.qcloud.com" title="域名注册 - 腾讯云">域名注册 - 腾讯云</a>）等。我是在阿里云的万网上注册了一个域名huding.name。</p>
+<h2 id="h2-u8D2Du4E70u4E3Bu673A"><a name="购买主机" class="reference-link"></a><span class="header-link octicon octicon-link"></span>购买主机</h2><p>因为之前做项目的时候使用过阿里云的主机，对阿里云的印象还是蛮好的，所以我开始打算使用阿里云的，但是后来发现太贵了，学生党实在负担不起。后来发现腾讯云推出了学生机(<a href="https://www.qcloud.com/act/campus" title="云+校园计划 - 腾讯云，值得信赖">云+校园计划 - 腾讯云，值得信赖</a>)，每个月只需1元。虽然阿里云也有学生机，但是申请过程较为麻烦，而且费用也比腾讯云贵，因此果断选择腾讯云。</p>
+<h2 id="h2-u57DFu540Du89E3u6790"><a name="域名解析" class="reference-link"></a><span class="header-link octicon octicon-link"></span>域名解析</h2><p>域名解析主要是在域名服务提供商那里将自己注册的域名解析到主机的IP地址。写到这里我就笑了，我居然已经使用国内互联网三大巨头中两家提供的服务了，即使用了阿里的域名服务和腾讯云的主机服务。还有更可笑的是，我后面为了方便统计访客数，又使用了百度的百度统计，我也是跪了这次，第一次搞一个简单的博客系统就使用了BAT三巨头的不同服务。</p>
+<h2 id="h2-u57DFu540Du5907u6848"><a name="域名备案" class="reference-link"></a><span class="header-link octicon octicon-link"></span>域名备案</h2><p>域名备案主要是主机服务提供商那里提交材料进行域名备案，至于怎么备案，主机服务提供商都会提供详细的教程的。PS：只要是在中国大陆的主机都要备案才能正常访问。</p>
+<h2 id="h2-u7CFBu7EDFu5F00u53D1"><a name="系统开发" class="reference-link"></a><span class="header-link octicon octicon-link"></span>系统开发</h2><p>做好前面的准备的开发工作后，我就开始进行实际的代码开发了。我本身对Java比较熟悉点，因此使用Java作为后端开发语言，前端开发语言为：html，js，css等。由于我的前端水平不高，让我从头开始编写代码，不知道要写到猴年马月去了。因此我就找了几款框架，在框架的基础上进行开发，能够达到事半功倍的效果。这几款框架分别是：</p>
+<p>Java框架：JFinal(<a href="http://www.jfinal.com/">http://www.jfinal.com/</a>)<br>前端框架：amazeui(<a href="http://amazeui.org" title="中国首个开源 HTML5 跨屏前端框架">中国首个开源 HTML5 跨屏前端框架</a>）,layui（<a href="http://www.layui.com" title="layui - 经典模块化前端框架">layui - 经典模块化前端框架</a>）。使用amazeui的特性实现屏幕适配，自适应屏幕。使用layui的特性实现前端脚本处理逻辑，实现与后台的交互。<br>开发方式是前后端完全分离，因此我借助Nginx服务器实现连接前端和后端，实现前后端通信。
+<p>最终的开发效果也是蛮好的，前端的博客内容展示：</p>
+<h3 id="h3-1-pc-"><a name="1.PC端效果" class="reference-link"></a><span class="header-link octicon octicon-link"></span>1.PC端效果</h3><p><img src="http://static.huding.name/image/fc4651349ded4cd0852be288bbdbea6a.png" alt="">
+<h3 id="h3-2-"><a name="2.移动端效果" class="reference-link"></a><span class="header-link octicon octicon-link"></span>2.移动端效果</h3><p><img src="http://static.huding.name/image/fa62f128b4184dafabcde954ad57efcc.png" alt="">
+<h3 id="h3-3-"><a name="3.后台管理系统" class="reference-link"></a><span class="header-link octicon octicon-link"></span>3.后台管理系统</h3><p><img src="http://static.huding.name/image/82f602d709ed45d18de11a605c2e6c7a.png" alt="">
+<h2 id="h2-u7CFBu7EDFu90E8u7F72"><a name="系统部署" class="reference-link"></a><span class="header-link octicon octicon-link"></span>系统部署</h2><p>这部分暂略。大体上是在服务器端安装JDK，Nginx，Tomcat等相关部署软件，设置相应的配置后，将自己开发的系统部署到相应的目录下就好了。</p>
+<h2 id="h2-u7ED3u675Fu8BED"><a name="结束语" class="reference-link"></a><span class="header-link octicon octicon-link"></span>结束语</h2><p>最终经过自己不断地捣鼓，我的个人博客<a href="http://www.huding.name" title="青菜萝卜胡丁程序员技术分享博客">青菜萝卜胡丁程序员技术分享博客</a>最终在2017年2月10日上线了。虽然我的代码写的不是很好，但本着开源精神，我将这个博客系统的代码开源在<a href="https://github.com/hujianhong" title="GitHub">GitHub</a>上了<a href="https://github.com/hujianhong/blog" title="个人博客系统(青菜萝卜胡丁程序员技术分享博客)">个人博客系统(青菜萝卜胡丁程序员技术分享博客)</a>。有需要的童鞋可以到这里去下载。</p>
+
+	    		</div>
+	    		<!-- blog content end -->
+	    		
+	    		<div class="qing-blog-zhuanzai">
+	    			转载请注明：<a href="http://www.huding.name">青菜萝卜胡丁博客</a> » <a href="http://www.huding.name/http://localhost:8080/luobo/front/B20170924195941.html">从零开始搭建个人博客站概述</a>
+	    		</div>
+	    		
+	    		<div class="qing-blog-social">
+	    				<span class="qing-blog-action qing-blog-like"> 
+	    					<i class="am-icon-heart"></i> 喜欢 (<span id="blog-content-like" class="count">365</span>)
+	    				</span>
+							<span class="or">or</span>
+							<span class="qing-blog-action qing-blog-share">
+								<i class="am-icon-share-alt"></i> 分享 (<span id="blog-content-share" class="bds_count" data-cmd="count" title="累计分享0次">0</span>)
+								<!-- <div class="action-popover">
+									<div class="popover top in">
+										<div class="arrow"></div>
+										<div class="popover-content">
+											<a href="#" class="sinaweibo fa fa-weibo" data-cmd="tsina" title="" data-original-title="分享到新浪微博"></a>
+											<a href="#" class="bds_qzone fa fa-star" data-cmd="qzone" title="" data-original-title="分享到QQ空间"></a>
+											<a href="#" class="tencentweibo fa fa-tencent-weibo" data-cmd="tqq" title="" data-original-title="分享到腾讯微博"></a>
+											<a href="#" class="qq fa fa-qq" data-cmd="sqq" title="" data-original-title="分享到QQ好友"></a>
+											<a href="#" class="bds_renren fa fa-renren" data-cmd="renren" title="" data-original-title="分享到人人网"></a>
+											<a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="" data-original-title="分享到微信"></a>
+											<a href="#" class="bds_more fa fa-ellipsis-h" data-cmd="more" data-original-title="" title=""></a>
+										</div>
+									</div>
+								</div> -->
+							</span>	
+					</div>
+	    		
+	    		<div class="qing-blog-donate qing-text-center">
+	    				<p>您的支持是博主写作最大的动力，如果您喜欢我的文章，感觉我的文章对您有帮助，请狠狠点击下面的</p>
+	    				<input type="button" id="btn-donate" value="我要小额赞助" class="qing-btn-donate"/>
+	    		</div>
+	    		
+	    		<!-- blog tag  start -->
+    			<div class="qing-margin-top qing-blog-tag">
+	            <i class="am-icon-tags"> &nbsp;</i>
+				   <span class="am-radius">域名</span>
+				   <span class="am-radius">GitHub</span>
+				   <span class="am-radius">layui</span>
+				   <span class="am-radius">博客</span>
+	        </div>
+	    		<!-- blog tag  end -->
+	    	</div>
+	    	<!--blog end -->
+	    	
+	    	<!-- blog footer start-->
+    		<div class="qing-blog-foot am-hide-sm-only">
+    				<span class="left"><i class="am-icon-angle-double-left"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">2014年12月CCF真题1 门禁系统</a></span>
+    				<span class="right"><a href="http://localhost:8080/luobo/front/B20170924195941.html">第三届阿里中间件性能挑战赛 初赛总结</a>&nbsp;<i class="am-icon-angle-double-right"></i></span>
+    		</div>
+    		<div class="qing-blog-foot am-show-sm-only">
+    				<span><i class="am-icon-angle-double-left"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">2014年12月CCF真题1 门禁系统</a></span><br>
+    				<span><i class="am-icon-angle-double-right"></i>&nbsp;<a href="http://localhost:8080/luobo/front/B20170924195941.html">第三届阿里中间件性能挑战赛 初赛总结</a></span>
+    		</div>
+	    	<!-- blog footer end-->
+	    	
+	    	<!-- dynamic more blog start-->
+				<div class="qing-margin-top" id="hot-rank-blogs"></div>
+	    	<!-- dynamic more blog end-->
+    		<!-- ad start-->
+    		<div id="blog-content-bottom-ad" class="qing-blog-ad qing-margin-top">
+    			广告占位
+    		</div>
+    		<!-- ad start-->
+    		<!-- comment start-->
+    		<div class="qing-content qing-margin-top" id="commentContainer"></div>
+	    	<!-- comment end-->
+	    </div>
+	    <!--正文内容结束-->
+			<!-- 侧边栏 开始-->
+	    <div class="am-u-md-4 am-u-sm-12" id="qing-left"></div>
+	    <!-- 侧边栏结束-->
+	</div>
+	<!-- content end -->
+
+  <footer class="qing-footer">
+    <div class="qing-text-center">
+       <h3><strong>青菜萝卜胡丁程序员技术分享博客简介</strong></h3>
+       <p class="am-text-sm">青菜萝卜胡丁程序员技术分享博客定位为IT技术博客站，博客内容主要涉及编程语言、推荐算法、数据挖掘等方面，分享实用的学习和开发资料。 </p>
+    </div>
+    <div class="qing-text-center">Copyright © 2016-2017 青菜萝卜 胡丁  |  联系我 : 1043244432@qq.com  |  All Rights Reserved.  |  蜀ICP备16028381</div>    
+  </footer>
+	
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/amazeui.min.js"></script>
+	<script src="static/layui/layui.js"></script>
+	<script>
+		layui.config({base:'static/js/'}).use('qingblog');
+	</script>
+	<!-- editor.md parser  -->
+	<script src="static/editor.md/lib/marked.min.js"></script>
+	<script src="static/editor.md/lib/prettify.min.js"></script>
+	<!-- <script src="static/editor.md/lib/raphael.min.js"></script>
+	<script src="static/editor.md/lib/underscore.min.js"></script> -->
+<!-- 	<script src="static/editor.md/lib/sequence-diagram.min.js"></script>
+	<script src="static/editor.md/lib/flowchart.min.js"></script>
+	<script src="static/editor.md/lib/jquery.flowchart.min.js"></script> -->
+	<script src="static/editor.md/editormd.min.js"></script>
+	<script type="text/javascript">
+	   $(function() {
+	      var articleEditormdView;
+	      articleEditormdView = editormd.markdownToHTML("article-editormd-view", {
+	      	htmlDecode      : "style,script,iframe",  // you can filter tags decode
+	      	/* emoji           : true, */
+	      	taskList        : true,
+	      	/* tex             : true,  // 默认不解析
+	      	flowChart       : true,  // 默认不解析
+	      	sequenceDiagram : true,  // 默认不解析 */
+	      });
+	   });
+	</script>
+	<script src="static/js/badutongji.js" ></script>
+	<script src="static/js/alibaba.js"></script>
+</body>
+</html>
