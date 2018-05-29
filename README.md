@@ -76,6 +76,14 @@ FRONT_PATH = front
 剩下的步骤和直接部署的过程是一样的，就不再赘述了。
 
 
+### IDEA开发
+
+直接在IDEA中使用open的方式打开项目，然后在IDEA的terminal窗口里面键入
+```
+mvn jetty:run
+```
+即可在IDEA中启动服务
+
 ## 任何疑问
 
 如果有任何部署方面的疑问，或者代码上的Bug都可以直接在GitHub上发起issues,或者直接联系我，我的邮箱为：hunter@huding.me.
