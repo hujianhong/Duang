@@ -23,7 +23,7 @@
 
 ### 1.直接安装
 
-安装包有两种格式的，一个是zip格式的,[点我下载](http://www.huding.name/qingcailuobo.zip) ,推荐这种方式。另一种是war格式的,[点我下载](http://www.huding.name/qingcailuobo.war)。这两种格式都可以实现部署，只不过zip解压挺方便的，使用常见的解压缩工具即可完成解压，war格式的，可以借助jar命令完成解压。
+安装包有两种格式的，一个是zip格式的,[点我下载](http://www.ibytes.net/qingcailuobo.zip) ,推荐这种方式。另一种是war格式的,[点我下载](http://www.ibytes.net/qingcailuobo.war)。这两种格式都可以实现部署，只不过zip解压挺方便的，使用常见的解压缩工具即可完成解压，war格式的，可以借助jar命令完成解压。
 
 完成解压后，在目录<strong>luobo/WEB-INF/classes</strong>下找到config.properties文件，初始配置信息如下：
 
